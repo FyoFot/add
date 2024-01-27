@@ -1,0 +1,47 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+</head>
+<body>
+    <div class="lol">
+        <h4>Для регистрации в боте введите ваши данные</h4>
+    </div>
+    <div class="lol">
+        <label for="kar">Имя</label>
+        <input id="kar" type="text">
+    </div>
+    <div class="lol">
+        <label for="lac">Почта</label>
+        <input id="lac" type="email">
+    </div>
+    <div class="lol">
+        <label for="vic">Телефон</label>
+        <input id="vic" type="tel">
+    </div>
+    <button onclick="collectData()">Отправить</button>
+    <script>let tg = window.Telegram.WebApp;
+        let send = document.getElementById("send");
+        send.addEventListener("click",()=>{
+            document.getElementById("kar").value=tg.initDataUnsafe.firstname
+        });
+        function collectData() {
+        var input1 = document.getElementById('kar').value; 
+                    var input2 = document.getElementById('lac').value;
+                    var input3 = document.getElementById('vic').value;
+        
+                    var data = "Данные:\n" +
+                               "Поле 1: " + input1 + "\n" +
+                               "Поле 2: " + input2 + "\n" +
+                               "Поле 3: " + input3;
+        
+                    alert(data);
+                    tg.sendData(JSON.stringify(data))
+                }</script>
+</body>
+</html>
