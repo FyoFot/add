@@ -8,11 +8,8 @@ var input1 = document.getElementById('kar').value;
             var input2 = document.getElementById('lac').value;
             var input3 = document.getElementById('vic').value;
 
-            var data = "Данные:\n" +
-                       "Поле 1: " + input1 + "\n" +
-                       "Поле 2: " + input2 + "\n" +
-                       "Поле 3: " + input3;
+            var data = {name:input1, email:input2, phone:input3};
 
-            alert(data);
+            
             tg.sendData(JSON.stringify(data))
         }
