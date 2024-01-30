@@ -1,0 +1,56 @@
+.email {
+    display: flex; /* Используем flex-контейнер для вертикального размещения элементов */
+    flex-direction: column; /* Устанавливаем направление столбцом */
+    margin-bottom: 10px; /* Отступ снизу между блоками */
+}
+
+.email label {
+    display: block; /* Устанавливаем элементы <label> как блочные для вертикального размещения */
+    margin-bottom: 5px; /* Отступ снизу между элементами <label> */
+}
+
+.email input {
+    display: block; /* Устанавливаем элементы <input> как блочные для вертикального размещения */
+    padding: 8px; /* Внутренний отступ вокруг поля ввода */
+    border: 1px solid #ccc; /* Граница поля ввода */
+    border-radius: 4px; /* Скругление углов границы */
+    font-size: 14px; /* Размер шрифта */
+    width: 200px; /* Пример ширины поля ввода */
+    margin-bottom: 10px; /* Отступ снизу между полями ввода */
+    margin-left: 825px;
+}
+.email {
+    display: flex;
+}
+button {
+    border: 0;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 500ms ease;
+    color: var(--tg-theme-button-color);
+    background: var(--tg-theme-button-text-color);
+}
+body {
+    font-weight: 200;
+    color:var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
+}
+h4 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+input {
+    width: 90%;
+    outline: none;
+    margin: 10px 5px;
+}
